@@ -1,4 +1,4 @@
-var port = process.env.PORT || 8000;
+var port = process.env.PORT || 8080;
 const express = require("express");
 const app = express();
 app.use(express.urlencoded({ extended: true }));
@@ -52,4 +52,4 @@ app.post("/", async (req, res) => {
     }
 });
 
-app.listen(port);
+app.listen(port, () => console.log('listening to port: ' + port));
