@@ -24,7 +24,8 @@ app.post("/", async (req, res) => {
 		(async () => {
 			for (var i = 1; i <= howManyPage; i++) {
 				const browser = await puppeteer.launch({
-					headless: true
+					headless: true,
+                    args: ["--no-sandbox"]
 				});
 				const page = await browser.newPage();
 				await page.goto(
