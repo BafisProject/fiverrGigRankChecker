@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/" method="post">
+        <input type="text" name="username" placeholder="Enter your fiverr user name" required/>
+        <input type="text" name="keyword" placeholder="Enter keyword..." required/>
+        <button type="submit">Click to Check</button>
+    </form>
+    <% if(gigFoundInPage > 0){ %>
+    <h3>We Found Your Gig on: <%= gigFoundInPage %> Page 😍 </h3>
+    <% }else if(gigFoundInPage === 0) {%> <h3><%= gigFoundInPage %>Not in top 20 pages</h3>
+        <% } else {%> <h3>Result Will display Here..</h3> <% } %> 
+</body>
+</html>
